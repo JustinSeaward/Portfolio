@@ -3,17 +3,17 @@ import "./Project.css";
 const Projects = () => {
   const projectList = [
     {
-      title: "Data Analyzer",
+      title: "Hab Taxi Service",
       description:
-        "A Python script that processes CSV files and visualizes trends.",
-      tech: ["Python", "Pandas"],
-      link: "#",
+        "A Python script that processes data files. Stores and retrieves information for employees, car rentals, payments, revenue, expenses and finances.",
+      tech: ["Python"],
+      link: "https://github.com/JustinSeaward/HAB_TAXI_SERVICE",
     },
     {
       title: "Portfolio Site",
       description: "This website! Built to showcase my journey as a developer.",
       tech: ["React", "Vite", "CSS"],
-      link: "#",
+      link: "",
     },
     // Add more projects here later!
   ];

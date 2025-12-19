@@ -4,7 +4,7 @@ const Skills = () => {
   // We store skills in an array for easy updates
   const skills = [
     { name: "Python", icon: "🐍", level: "Intermediate" },
-    { name: "React", icon: "⚛️", level: "Basic" },
+    { name: "React", icon: "⚛️", level: "Intermediate" },
     { name: "JavaScript", icon: "🟨", level: "Intermediate" },
     { name: "HTML/CSS", icon: "🎨", level: "Advanced" },
   ];

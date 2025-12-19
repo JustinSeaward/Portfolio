@@ -1,0 +1,15 @@
+footer {
+  height: 50px;
+  width: 1024px;
+  background-color: blue;
+  color: white;
+  border-radius: 1rem;
+  margin: 0%;
+  padding: 0%;
+}
+
+footer p {
+  text-align: center;
+  margin: auto;
+  padding-top: 12px;
+}

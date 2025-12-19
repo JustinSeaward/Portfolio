@@ -1,4 +1,6 @@
 import { useState } from "react";
+import Navbar from "./components/navbar/Narbar";
+import Footer from "./components/footer/Footer";
 import "./App.css";
 
 function App() {
@@ -6,9 +8,13 @@ function App() {
 
   return (
     <>
-      <button onClick={() => setCount((count) => count + 1)}>
-        count is {count}
-      </button>
+      <div className="main-container">
+        <Navbar />
+        <button onClick={() => setCount((count) => count + 1)}>
+          count is {count}
+        </button>
+        <Footer />
+      </div>
     </>
   );
 }

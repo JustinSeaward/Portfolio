@@ -12,7 +12,11 @@ const Landing = () => {
         I am a student building web applications and analyzing data. I bridge
         the gap between Python scripts and dynamic React interfaces.
       </p>
-      <a href="#projects" className="btn">
+      <a
+        href="https://github.com/JustinSeaward"
+        target="_blank"
+        className="btn"
+      >
         View My Work
       </a>
     </section>

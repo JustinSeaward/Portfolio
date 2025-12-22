@@ -3,7 +3,8 @@ import Navbar from "./components/navbar/Narbar";
 import Landing from "./pages/landing-page/Landing";
 import Projects from "./components/project/Project";
 import Skills from "./components/skills/Skills";
-import About from "./pages/landing-page/about/About";
+import About from "./components/about/About";
+import Contact from "./components/contact/Contact";
 import Footer from "./components/footer/Footer";
 import "./App.css";
 
@@ -18,6 +19,7 @@ function App() {
         <Skills />
         <Projects />
         <About />
+        <Contact />
         <Footer />
       </div>
     </>

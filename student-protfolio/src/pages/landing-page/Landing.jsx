@@ -17,7 +17,7 @@ const Landing = () => {
         target="_blank"
         className="btn"
       >
-        View My Work
+        View GitHub Here
       </a>
     </section>
   );

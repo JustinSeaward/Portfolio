@@ -1,0 +1,55 @@
+.experience-section {
+  padding: 4rem 0;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.timeline {
+  position: relative;
+  margin-top: 2rem;
+  padding-left: 2rem;
+  border-left: 2px solid #334155; /* The vertical line */
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 3rem;
+}
+
+.timeline-item::before {
+  content: "";
+  position: absolute;
+  left: -2.6rem; /* Adjust based on padding-left above */
+  top: 5px;
+  width: 1rem;
+  height: 1rem;
+  background: var(--accent-color);
+  border-radius: 50%;
+  border: 4px solid var(--bg-color); /* Creates a "cutout" effect */
+}
+
+.timeline-content h3 {
+  margin: 0;
+  color: #fff;
+}
+
+.timeline-content h4 {
+  margin: 0.5rem 0 1rem 0;
+  font-weight: normal;
+  color: #94a3b8;
+  font-size: 0.95rem;
+}
+
+.date {
+  color: var(--accent-color);
+  font-weight: bold;
+}
+
+.timeline-content ul {
+  padding-left: 1.2rem;
+  color: #cbd5e1;
+}
+
+.timeline-content li {
+  margin-bottom: 0.5rem;
+}

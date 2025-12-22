@@ -36,7 +36,7 @@ const Experience = () => {
       ],
     },
     {
-      role: "Journeyman Industrial Mechanic",
+      role: "Apprentice Industrial Mechanic",
       company: "Newdock - Shipyard",
       period: "2012 - 2017 ",
       description: [

@@ -37,6 +37,12 @@ const Projects = () => {
       tech: ["Python"],
       link: "https://github.com/JustinSeaward/HAB_TAXI_SERVICE",
     },
+    {
+      title: "More projects to come!",
+      description:
+        "This is a placeholder for other projects that have not been added yet!",
+      tech: ["Python", "HTML", "CSS", "React"],
+    },
   ];
 
   return (

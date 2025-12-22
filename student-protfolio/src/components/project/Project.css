@@ -1,11 +1,11 @@
-.skills-grid {
+.projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   gap: 1.5rem;
   margin-top: 2rem;
 }
 
-.skill-card {
+.project-card {
   background: var(--card-bg);
   padding: 1.5rem;
   border-radius: 8px;
@@ -18,13 +18,16 @@
   text-align: center;
 }
 
-.skill-card:hover {
+.project-card:hover {
   border-color: var(--accent-color);
   transform: translateY(-5px);
   box-shadow: 0 10px 20px rgba(20, 214, 248, 0.2);
 }
 
-.icon {
-  font-size: 2rem;
-  margin-bottom: 0.5rem;
+.tech-tag {
+  background: #334155;
+  padding: 0.2rem 0.6rem;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  margin-right: 0.5rem;
 }

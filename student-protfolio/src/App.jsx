@@ -1,5 +1,11 @@
 import { useState } from "react";
 import Navbar from "./components/navbar/Narbar";
+import Landing from "./pages/landing-page/Landing";
+import Projects from "./components/project/Project";
+import Skills from "./components/skills/Skills";
+import Experience from "./components/experience/Experience";
+import About from "./components/about/About";
+import Contact from "./components/contact/Contact";
 import Footer from "./components/footer/Footer";
 import "./App.css";
 
@@ -10,9 +16,12 @@ function App() {
     <>
       <div className="main-container">
         <Navbar />
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
+        <Landing />
+        <Skills />
+        <Projects />
+        <Experience />
+        <About />
+        <Contact />
         <Footer />
       </div>
     </>

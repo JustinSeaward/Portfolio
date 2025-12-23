@@ -10,6 +10,7 @@ for (let row = 0; row < 8; row++) {
   // Loop eight columns
   for (let col = 0; col < 8; col++) {
     const square = document.createElement("div");
+
     if ((row + col) % 2 === 1) {
       square.classList.add("dark");
     } else {
@@ -21,7 +22,13 @@ for (let row = 0; row < 8; row++) {
     square.dataset.col = col;
     board.appendChild(square);
 
+    // Square highlight toggle on
     square.addEventListener("click", () => {
+      const highlightedSquare = document.querySelector(".highlight");
+
+      if (highlightedSquare !== null && highlightedSquare !== square) {
+        highlightedSquare.classList.remove("highlight");
+      }
       square.classList.toggle("highlight");
     });
   }

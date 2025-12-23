@@ -1,0 +1,36 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #222; /* Dark background to make board pop */
+  margin: 0;
+}
+
+#board {
+  display: grid;
+  /* Create 8 columns, each 60px wide */
+  grid-template-columns: repeat(8, 60px);
+  /* Create 8 rows, each 60px tall */
+  grid-template-rows: repeat(8, 60px);
+  border: 5px solid #555;
+}
+
+.square {
+  width: 60px;
+  height: 60px;
+  cursor: pointer; /* Shows a hand icon when hovering */
+}
+
+/* Classic Wood Colors */
+.light {
+  background-color: #bdeeb5;
+}
+.dark {
+  background-color: #439c35;
+}
+
+/* We will use this class later for the Bishop moves! */
+.highlight {
+  background-color: #ffff55; /* Bright yellow */
+}

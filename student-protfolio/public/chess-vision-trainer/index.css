@@ -3,7 +3,7 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background-color: #222; /* Dark background to make board pop */
+  background-color: #222;
   margin: 0;
 }
 
@@ -19,18 +19,17 @@ body {
 .square {
   width: 60px;
   height: 60px;
-  cursor: pointer; /* Shows a hand icon when hovering */
+  cursor: pointer;
 }
 
 /* Classic Wood Colors */
 .light {
-  background-color: #bdeeb5;
+  background-color: #d2eecd;
 }
 .dark {
   background-color: #439c35;
 }
 
-/* We will use this class later for the Bishop moves! */
 .highlight {
   background-color: #ffff55; /* Bright yellow */
 }

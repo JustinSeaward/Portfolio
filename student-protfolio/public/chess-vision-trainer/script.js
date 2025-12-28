@@ -4,6 +4,17 @@
 
 const board = document.getElementById("board");
 
+const startingPosition = [
+  ["r", "n", "b", "q", "k", "b", "n", "r"],
+  ["p", "p", "p", "p", "p", "p", "p", "p"],
+  ["", "", "", "", "", "", "", ""],
+  ["", "", "", "", "", "", "", ""],
+  ["", "", "", "", "", "", "", ""],
+  ["", "", "", "", "", "", "", ""],
+  ["P", "P", "P", "P", "P", "P", "P", "P"],
+  ["R", "N", "B", "Q", "K", "B", "N", "R"],
+];
+
 // for loop to create the board.
 // Loop eight rows
 for (let row = 0; row < 8; row++) {
@@ -11,6 +22,7 @@ for (let row = 0; row < 8; row++) {
   for (let col = 0; col < 8; col++) {
     const square = document.createElement("div");
 
+    // logic to determine light or dark square
     if ((row + col) % 2 === 1) {
       square.classList.add("dark");
     } else {
@@ -20,6 +32,7 @@ for (let row = 0; row < 8; row++) {
 
     square.dataset.row = row;
     square.dataset.col = col;
+
     board.appendChild(square);
 
     // Square highlight toggle on

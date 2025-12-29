@@ -22,6 +22,17 @@ for (let row = 0; row < 8; row++) {
   for (let col = 0; col < 8; col++) {
     const square = document.createElement("div");
 
+    // logic to determine where each piece it on the board
+    const piece = startingPosition[row][col];
+
+    // checking if piece is not an empty string
+    if (piece !== "") {
+      // if the square isnt empty create an img tag for the piece
+      const pieceImage = document.createElement("img");
+      pieceImage.src = `imgs/${piece}.svg`;
+      square.appendChild(pieceImage);
+    }
+
     // logic to determine light or dark square
     if ((row + col) % 2 === 1) {
       square.classList.add("dark");

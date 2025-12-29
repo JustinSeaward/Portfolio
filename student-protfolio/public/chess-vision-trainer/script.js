@@ -5,8 +5,8 @@
 const board = document.getElementById("board");
 
 const startingPosition = [
-  ["r", "n", "b", "q", "k", "b", "n", "r"],
-  ["p", "p", "p", "p", "p", "p", "p", "p"],
+  ["rd", "nd", "bd", "qd", "kd", "bd", "nd", "rd"],
+  ["pd", "pd", "pd", "pd", "pd", "pd", "pd", "pd"],
   ["", "", "", "", "", "", "", ""],
   ["", "", "", "", "", "", "", ""],
   ["", "", "", "", "", "", "", ""],

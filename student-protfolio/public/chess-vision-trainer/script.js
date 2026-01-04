@@ -22,18 +22,22 @@ for (let row = 0; row < 8; row++) {
   for (let col = 0; col < 8; col++) {
     const square = document.createElement("div");
 
-    // logic to determine where each piece it on the board
+    // Determine where each piece is on the board.
     const piece = startingPosition[row][col];
 
-    // checking if piece is not an empty string
+    // Checking if there is a piece on a square (not an empty string in the 2D array).
     if (piece !== "") {
-      // if the square isnt empty create an img tag for the piece
+      // If the square isnt empty create an img tag for the piece image.
       const pieceImage = document.createElement("img");
+
+      // Set source for the piece image.
       pieceImage.src = `imgs/${piece}.svg`;
+
+      // Place image on the sqaure.
       square.appendChild(pieceImage);
     }
 
-    // logic to determine light or dark square
+    // if statement to determine light or dark square.
     if ((row + col) % 2 === 1) {
       square.classList.add("dark");
     } else {
@@ -46,11 +50,18 @@ for (let row = 0; row < 8; row++) {
 
     board.appendChild(square);
 
-    // Square highlight toggle on
+    // Square highlight toggle.
     square.addEventListener("click", () => {
       const highlightedSquare = document.querySelector(".highlight");
 
       if (highlightedSquare !== null && highlightedSquare !== square) {
+        // Select the piece(img) to move
+        const pieceToMove = highlightedSquare.querySelector("img");
+        // If statement to move a piece if a piece is there
+        if (pieceToMove !== null) {
+          square.appendChild(pieceToMove);
+        }
+        // Remove old highlighted square
         highlightedSquare.classList.remove("highlight");
       }
       square.classList.toggle("highlight");

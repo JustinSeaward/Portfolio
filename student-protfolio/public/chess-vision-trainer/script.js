@@ -1,9 +1,11 @@
 // Author: Justin Seaward
-// Description: A chess vision trainer app. Help visulize the line of sight for chess pieces.
+// Description: A basic chess app at the moment. Im hoping to add different modes: One to help visulise the piece movement on the board. One to learn how to set up the board for new players.
 // Date: Dec 22, 2025
 
+// Define the board.
 const board = document.getElementById("board");
 
+// Define a 2D array for the starting position of the pieces on the board.
 const startingPosition = [
   ["rd", "nd", "bd", "qd", "kd", "bd", "nd", "rd"],
   ["pd", "pd", "pd", "pd", "pd", "pd", "pd", "pd"],
@@ -27,20 +29,20 @@ for (let row = 0; row < 8; row++) {
 
     // Checking if there is a piece on a square.
     if (piece !== "") {
-      // If the square isnt empty create an img tag for the piece image.
+      // Create an img tag for the piece image.
       const pieceImage = document.createElement("img");
 
       // Set source for the piece image.
       pieceImage.src = `imgs/${piece}.svg`;
 
-      // Adds the piece type as the ID.
+      // Adds the piece type as the ID (row,col).
       pieceImage.id = piece;
 
       // Place image on the sqaure.
       square.appendChild(pieceImage);
     }
 
-    // if statement to determine light or dark square.
+    // If statement to determine light or dark square.
     if ((row + col) % 2 === 1) {
       square.classList.add("dark");
     } else {
@@ -88,16 +90,21 @@ for (let row = 0; row < 8; row++) {
         ) {
           return true;
         }
-        // Normal move logic for white pawns.
+        // Normal move logic for white pawn.
         else if (
           pieceType === "P" &&
           startRow - endRow === 1 &&
           startCol === endCol
         ) {
           return true;
+        } else if (
+          startRow - endRow === 1 &&
+          Math.abs(startCol - endCol) === 1 &&
+          endSquare.querySelector("img") !== null
+        ) {
+          return true;
         }
-        // Move logic for black pawns.
-        // Checking if the black pawns is on its starting square for its double jump.
+        // Checking if the black pawn is on its starting square for its double jump.
         else if (
           pieceType === "pd" &&
           startRow === 1 &&
@@ -105,7 +112,7 @@ for (let row = 0; row < 8; row++) {
           startCol === endCol
         ) {
           return true;
-          // Normal pawn move logic.
+          // Normal black pawn move logic.
         } else if (
           pieceType === "pd" &&
           startRow - endRow === -1 &&
@@ -120,8 +127,11 @@ for (let row = 0; row < 8; row++) {
         // Select the piece(img) to move.
         const pieceToMove = highlightedSquare.querySelector("img");
 
-        // If statement to move a piece if a piece is there.
-        if (pieceToMove !== null) {
+        // If statement to move a piece with rules.
+        if (
+          pieceToMove !== null &&
+          validMoves(pieceToMove.id, highlightedSquare, square)
+        ) {
           // Checking for a existing piece in the square.
           const capturePiece = square.querySelector("img");
 

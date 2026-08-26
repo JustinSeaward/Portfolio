@@ -7,10 +7,11 @@ I'm transitioning into tech after a successful 15+ year career in the trades as 
 
 ## 🛠️ Tech Stack
 * **Languages:** JavaScript, HTML, CSS, Python, Java.
-* **Frameworks:** React, Node.js, Spring Boot, Maven.
+* **Frameworks:** React, Spring Boot.
+* **Tools:** Maven, Vite, Git.
 * **IDEs:** VS Code, IntelliJ, Cursor.
-* **Hosting:** Supabase, Vercel, Render, Cloudflare, AWS.
-* **Database** MySQL, Postgres, Mongo.
+* **Hosting & Cloud:** Supabase, Vercel, Render, Cloudflare, AWS.
+* **Database** MySQL, PostgresSQL, MongoDB.
 
 ## 📫 Contact
 * **LinkedIn:** https://www.linkedin.com/in/justin-seaward-94b9a136a/
